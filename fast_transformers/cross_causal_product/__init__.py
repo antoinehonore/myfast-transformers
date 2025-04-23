@@ -1,8 +1,7 @@
-#
-# Copyright (c) 2025 KTH Royal Institute of Technology https://www.kth.se
-# Written by Antoine Honoré <honore@kth.se>,
+# Copyright (c) 2020 Idiap Research Institute, http://www.idiap.ch/
+# Written by Angelos Katharopoulos <angelos.katharopoulos@idiap.ch>,
+# Apoorv Vyas <avyas@idiap.ch>
 # Antoine Honoré <honore@kth.se>
-#
 
 import torch
 from  multiprocessing.dummy import Pool
