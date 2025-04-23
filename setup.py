@@ -126,6 +126,13 @@ def get_extensions():
             extra_compile_args=_get_cpu_extra_compile_args()
         ),
         CppExtension(
+            "fast_transformers.cross_causal_product.cross_causal_product_cpu",
+            sources=[
+                "fast_transformers/cross_causal_product/cross_causal_product_cpu.cpp"
+            ],
+            extra_compile_args=_get_cpu_extra_compile_args()
+        ),
+        CppExtension(
             "fast_transformers.local_product.local_product_cpu",
             sources=[
                 "fast_transformers/local_product/local_product_cpu.cpp"
@@ -182,6 +189,13 @@ def get_extensions():
                 "fast_transformers.causal_product.causal_product_cuda",
                 sources=[
                     "fast_transformers/causal_product/causal_product_cuda.cu"
+                ],
+                extra_compile_args=_get_gpu_extra_compile_args()
+            ),
+            CUDAExtension(
+                "fast_transformers.cross_causal_product.cross_causal_product_cuda",
+                sources=[
+                    "fast_transformers/cross_causal_product/cross_causal_product_cuda.cu"
                 ],
                 extra_compile_args=_get_gpu_extra_compile_args()
             ),
