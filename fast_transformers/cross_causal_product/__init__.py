@@ -32,7 +32,7 @@ def causal_dot_product(Q, K, V, tq, tkv, pool=None):
     return product / (normalization + 1e-6)
 
 
-class CrossCausalDotNumerator(torch.autograd.Function):
+class CrossCausalDotProduct(torch.autograd.Function):
     """Compute the weighted sum of values but attending only to previous
     values."""
     dot_numerator = {

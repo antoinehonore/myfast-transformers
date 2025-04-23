@@ -267,13 +267,13 @@ void cross_causal_dot_backward(
 
 PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
     m.def(
-        "causal_dot_product",
+        "cross_causal_dot_product",
         &cross_causal_dot_product,
         "Compute the weighted sum of values but attending only to previous "
         "values."
     );
     m.def(
-        "causal_dot_backward",
+        "cross_causal_dot_backward",
         &cross_causal_dot_backward,
         "Compute the gradient of queries, keys and values given the gradient "
         "of causal_dot_product."
